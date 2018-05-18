@@ -555,8 +555,7 @@ updateTrajectoryCommand(const JointTrajectoryConstPtr& msg, RealtimeGoalHandlePt
     }
     else
     {
-      // All trajectory points are in the past, nothing new to execute. Keep on executing current trajectory
-      ROS_WARN_NAMED(name_, "All trajectory points are in the past, nothing new to execute.");
+      ROS_WARN_NAMED(name_, "Failed to initialize trajectory from message, skipping.");
       return false;
     }
   }
